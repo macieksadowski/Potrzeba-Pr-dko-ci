@@ -64,8 +64,8 @@ public class LapTimer : MonoBehaviour
             elapsedTime = Time.time - startTime;
             int minutes = (int)elapsedTime / 60;
             int seconds = (int)elapsedTime - 60 * minutes;
-            int milliseconds = (int)(1000* (elapsedTime - minutes * 60 - seconds));
-            timeText.text = string.Format("{0:00}:{1:00}:{2:000}", minutes, seconds, milliseconds);
+            int milliseconds = (int)(1000* (elapsedTime - minutes * 60 - seconds) / 10);
+            timeText.text = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
             
         }
 
